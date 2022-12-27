@@ -24,3 +24,6 @@ package-lock.json
 *.sln
 *.sw?
 .env
+
+# React testing library Snapshots
+tests/__snapshots__/

@@ -12,20 +12,19 @@ const newMessage = {
     detail: "An error has happen!!"
 }
 
-export const FirstApp = ({title, subtitle}) => {
+export const FirstApp = ({title, subtitle, name}) => {
     //la funcion getNombre() podria estar aqui, pero al colocarse por fuera,
     //solo se carga en memoria la primera vez.
-  if (!title) {
-    throw new Error('El title no existe.');
-  }
+  // if (!title) {
+  //   throw new Error('El title no existe.');
+  // }
   return (
     // <Fragment></Fragment>
     <>
-      <h2>{title}</h2>
+      <h1 data-testid="test-title">{title}</h1>
       <p>{ subtitle }</p>
-        <p>{getNombre()}</p>
-        <p>{newMessage.message}</p>
-      <p>{newMessage.detail}</p>
+      <p>{name}</p>
+      <div>{name}</div>
       
     </>
     
@@ -38,6 +37,7 @@ FirstApp.propTypes = {
 }
 
 FirstApp.defaultProps = {
-  title: 'No hay título',
-  subtitle: 543
+  // title: 'No hay título',
+  subtitle: 1234,
+  name: 'No hay nombre'
 }
